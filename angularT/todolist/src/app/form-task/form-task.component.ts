@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { DataTasksService } from '../data-tasks.service';
 
 
 @Component({
@@ -12,7 +13,12 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class FormTaskComponent {
-  register(taskTitle: string) {
-    console.log(`Formulaire soumis`, taskTitle);
+  constructor(private dataTasksService: DataTasksService) {
+  }
+
+  register(formValues: string) {
+    console.log("formValues values dans onSubmit", formValues)
+    // emission notification next 
+    this.dataTasksService.setFormValues(formValues)
   }
 }

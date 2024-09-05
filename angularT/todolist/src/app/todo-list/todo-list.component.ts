@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TaskInterface } from '../interfaces/task-interface';
 import { TaskComponent } from './task/task.component';
 import { DataTasksService } from '../data-tasks.service';
-import { NewsletterComponent } from '../newsletter/newsletter.component';
+import { FormTaskComponent } from '../form-task/form-task.component';
 
 @Component({
   selector: 'digi-todo-list',
   standalone: true,
-  imports: [CommonModule, TaskComponent, NewsletterComponent],
+  imports: [CommonModule, TaskComponent, FormTaskComponent],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.css',
 })
@@ -32,6 +32,32 @@ export class TodoListComponent {
       complete: () => {
         console.log(`Observable issu de la loadTasks terminé `);
       },
+
     });
+    //souscription l'observable 
+    this.dataTasksService.getFormValuesObservable().subscribe({
+      next: (newTaskData) => {
+        //ajout local 
+        const newTask = {
+          name: 'tmp',
+          done: false,
+          comment: '',
+          ...newTaskData
+        }
+        this.tasks.push({ ...newTask, id: "tmp" })
+        // ajout sur jsonServer
+        this.dataTasksService.postTask(newTask).subscribe({
+          next: (newTaskFromJson) => {
+            console.log("newTaskFromJson: ", newTaskFromJson)
+          },
+          error: (error) => {
+            console.error("error attrapée dans le todiList component lors de la requete http post", error.message())
+          }
+        })
+
+      }
+
+    })
+
   }
 }

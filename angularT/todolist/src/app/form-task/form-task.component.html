@@ -1,6 +1,8 @@
 <p>form-task works!</p>
-<form (ngSubmit)="register(taskForm.value)" #taskForm="ngForm"class="d-flex gap-3 align-items-center">
-    <label>Tâche : </label>
-    <input name="task" ngModel>
-    <button type="submit" class="btn btn-success">Ajouter une tâche</button>
+
+
+<form (ngSubmit)="register(taskForm.value)" #taskForm="ngForm">
+    <label for="name">TAche</label>
+    <input ngModel id="name" name="name" required />
+    <button type="submit">Ajouter</button>
 </form>
