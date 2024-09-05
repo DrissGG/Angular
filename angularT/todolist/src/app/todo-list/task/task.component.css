@@ -64,3 +64,27 @@
     transform: scale(1.05);
     opacity: 0.9;
 }
+
+/* Bouton de suppression rouge plus visible */
+button.btn-danger {
+    background-color: #dc3545;
+    /* Couleur de fond rouge Bootstrap */
+    border-color: #dc3545;
+    /* Bordure rouge */
+    color: #fff;
+    /* Couleur du texte en blanc */
+    padding: 8px 16px;
+    /* Espacement interne du bouton */
+    font-size: 14px;
+    /* Taille de police du bouton */
+    cursor: pointer;
+    /* Curseur de pointeur */
+    transition: background-color 0.3s ease;
+    /* Transition pour hover */
+}
+
+/* Effet de survol pour le bouton de suppression */
+button.btn-danger:hover {
+    background-color: #c82333;
+    /* Couleur plus foncée au survol */
+}

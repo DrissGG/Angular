@@ -63,4 +63,8 @@ export class TodoListComponent {
     })
 
   }
+  // Méthode pour gérer la suppression locale de la tâche
+  onTaskDelete(taskId: string) {
+    this.tasks = this.tasks.filter(task => task.id !== taskId);
+  }
 }

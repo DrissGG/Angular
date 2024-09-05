@@ -3,7 +3,7 @@
 <digi-form-task></digi-form-task>
 <ul>
   <li *ngFor="let task of tasks">
-    <digi-task [task]="task"></digi-task>
+    <digi-task [task]="task" (deleteTaskEvent)="onTaskDelete($event)"></digi-task>
 
   </li>
 </ul>

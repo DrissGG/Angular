@@ -1,0 +1,75 @@
+/* Style pour le conteneur du formulaire */
+form {
+    background-color: #f9f9f9;
+    /* Couleur de fond douce */
+    padding: 20px;
+    /* Espace interne autour du formulaire */
+    border-radius: 8px;
+    /* Coins arrondis pour un effet doux */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Légère ombre pour donner de la profondeur */
+    max-width: 400px;
+    /* Largeur maximale du formulaire */
+    margin: 20px auto;
+    /* Centrer le formulaire */
+}
+
+/* Style pour les étiquettes (labels) */
+label {
+    display: block;
+    /* Chaque label occupe toute la largeur disponible */
+    margin-bottom: 8px;
+    /* Espace entre le label et l'input */
+    font-weight: bold;
+    /* Texte en gras pour le label */
+    color: #333;
+    /* Couleur du texte du label */
+}
+
+/* Style pour les champs de saisie (inputs) */
+input {
+    width: calc(100% - 12px);
+    /* Champs de saisie occupent toute la largeur moins la marge */
+    padding: 10px;
+    /* Espace interne dans le champ de saisie */
+    margin-bottom: 15px;
+    /* Espace en dessous de chaque champ de saisie */
+    border: 1px solid #ccc;
+    /* Bordure gris clair */
+    border-radius: 4px;
+    /* Coins légèrement arrondis */
+    font-size: 14px;
+    /* Taille du texte */
+    box-sizing: border-box;
+    /* Inclure padding et border dans la largeur */
+}
+
+/* Style pour le bouton de soumission */
+button {
+    display: block;
+    /* Le bouton occupe toute la largeur disponible */
+    width: 100%;
+    /* Largeur totale */
+    padding: 10px;
+    /* Espace interne dans le bouton */
+    background-color: #007bff;
+    /* Couleur de fond bleue */
+    color: #fff;
+    /* Couleur du texte en blanc */
+    border: none;
+    /* Pas de bordure */
+    border-radius: 4px;
+    /* Coins légèrement arrondis */
+    font-size: 16px;
+    /* Taille du texte */
+    cursor: pointer;
+    /* Curseur de la souris en mode pointer */
+    transition: background-color 0.3s ease;
+    /* Transition pour l'effet de survol */
+}
+
+/* Effet de survol pour le bouton */
+button:hover {
+    background-color: #0056b3;
+    /* Couleur de fond plus foncée au survol */
+}
