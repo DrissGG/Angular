@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-newsletter',
@@ -7,11 +12,10 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
   imports: [ReactiveFormsModule],
   templateUrl: './newsletter.component.html',
 })
+
 export class NewsletterComponent implements OnInit {
   newsletterForm!: FormGroup;
-
-  constructor(private fb: FormBuilder) {}
-
+  constructor(private fb: FormBuilder) { }
   ngOnInit() {
     this.newsletterForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
