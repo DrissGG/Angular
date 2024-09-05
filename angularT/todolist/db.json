@@ -9,18 +9,44 @@
     {
       "id": "2",
       "name": "Faire le ménage",
-      "done": false
+      "done": false,
+      "comment": "Le sol ne va pas se nettoyer tout seul... ou est-ce que ?"
     },
     {
       "id": "3",
       "name": "Réviser rxjs",
-      "done": false
+      "done": false,
+      "comment": "Une petite dose de programmation réactive pour booster tes compétences !"
     },
     {
       "id": "0a40",
       "name": "Longe Côtejjjj",
       "done": false,
-      "comment": ""
+      "comment": "Prépare tes jambes, on part pour une longue promenade en bord de mer !"
+    },
+    {
+      "id": "649b",
+      "name": "Wafe Care",
+      "done": false,
+      "comment": "Parce que les vagues aussi ont besoin d'amour."
+    },
+    {
+      "id": "83e1",
+      "name": "musculation ",
+      "done": false,
+      "comment": "travailler les biceps"
+    },
+    {
+      "id": "83e1",
+      "name": "musculation ",
+      "done": false,
+      "comment": "travailler les biceps"
+    },
+    {
+      "id": "2223",
+      "name": "road trip",
+      "done": false,
+      "comment": "Destination exotique"
     }
   ]
 }

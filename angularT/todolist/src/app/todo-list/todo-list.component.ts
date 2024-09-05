@@ -41,7 +41,6 @@ export class TodoListComponent {
         const newTask = {
           name: 'tmp',
           done: false,
-          comment: '',
           ...newTaskData
         }
         this.tasks.push({ ...newTask, id: "tmp" })
@@ -49,9 +48,13 @@ export class TodoListComponent {
         this.dataTasksService.postTask(newTask).subscribe({
           next: (newTaskFromJson) => {
             console.log("newTaskFromJson: ", newTaskFromJson)
+            //je voudrais donner l'id provenant du server  a l'objet tache local
+            // coder une ligne ici 
+            newTaskData.id = newTaskFromJson.id
           },
           error: (error) => {
             console.error("error attrapée dans le todiList component lors de la requete http post", error.message())
+            this.tasks.pop() //methode impure 
           }
         })
 
