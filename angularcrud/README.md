@@ -1,8 +1,8 @@
 ## Installation du Projet
 
 1. **Cloner le dépôt :**
-   git clone https://github.com/DrissGG/Angular.git
-   cd Angular/angularcrud<angularcrud>
+   `git clone https://github.com/DrissGG/Angular.git`
+   `cd angularcrud`<angularcrud>
    </code></div></div></pre>
 2. **Installer les dépendances :**
    Assurez-vous que vous avez [Node.js](https://nodejs.org/) installé. Ensuite, installez les dépendances du projet :
@@ -10,7 +10,7 @@
    </code></div></div></pre>
 3. **Installer `json-server` globalement :**
    `json-server` est utilisé pour simuler une API REST.
-   npm install -g json-server
+   `npm install -g json-server`
    </code></div></div></pre>
 
 ## Lancer le Projet
@@ -30,7 +30,7 @@
 1. **Lancer le serveur de développement Angular :**
    Dans un terminal, naviguez jusqu'au répertoire de votre projet Angular et lancez le serveur de développement Angular :
 
-   ng serve
+   `ng serve`
    </code></div></div></pre>
 
    Par défaut, l'application sera disponible sur `http://localhost:4200`.
