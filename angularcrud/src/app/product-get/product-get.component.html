@@ -12,9 +12,36 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary me-2" (click)="handleEditProduct(product.id)">Modifier</button>
-                    <button class="btn btn-danger" (click)="handleDeleteProduct(product.id)">Supprimer</button>
+                    <button class="btn btn-primary me-2" (click)="handleEditProduct(product.id)">
+                        Modifier
+                    </button>
+                    <button class="btn btn-danger" (click)="openConfirmDeleteModal(product.id)">
+                        Supprimer
+                    </button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de confirmation -->
+<div class="modal" [ngClass]="{ 'show d-block': showModal }" tabindex="-1" *ngIf="showModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmer la suppression</h5>
+                <button type="button" class="btn-close" aria-label="Close" (click)="handleCancelDelete()"></button>
+            </div>
+            <div class="modal-body">
+                Êtes-vous sûr de vouloir supprimer ce produit ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="handleCancelDelete()">
+                    Annuler
+                </button>
+                <button type="button" class="btn btn-danger" (click)="handleConfirmDelete()">
+                    Supprimer
+                </button>
             </div>
         </div>
     </div>
