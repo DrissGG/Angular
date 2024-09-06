@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Vélo de ville Peugeot",
+      "description": "Un look d'un autre temps",
+      "price": 190
+    },
+    {
+      "id": "6a9e",
+      "name": "chaussete",
+      "description": "en laine",
+      "price": 1
+    },
+    {
+      "id": "ced8",
+      "name": "X ADV",
+      "description": "Full Black ",
+      "price": 12000
+    }
+  ]
+}
